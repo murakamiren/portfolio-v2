@@ -1,4 +1,5 @@
 import { Fragment, ReactNode, VFC } from "react";
+import Footer from "./footer";
 import Header from "./header";
 
 type layoutProps = {
@@ -10,6 +11,7 @@ const Layout: VFC<layoutProps> = (props) => {
 		<Fragment>
 			<Header />
 			<main>{props.children}</main>
+			<Footer />
 		</Fragment>
 	);
 };

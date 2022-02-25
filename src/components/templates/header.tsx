@@ -15,7 +15,7 @@ const Header: VFC = () => {
 				<Container maxW="container.xl" position="absolute" top="0">
 					<nav>
 						<Flex justifyContent="space-between" alignItems="center" h="8vh">
-							<Heading as="h1" fontSize="2xl" fontWeight="medium">
+							<Heading as="h1" fontFamily="Montserrat" fontSize="2xl" fontWeight="medium">
 								Rm
 							</Heading>
 							<HStack spacing={windowSize.width > 1024 ? 8 : 4}>
