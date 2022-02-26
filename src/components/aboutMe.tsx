@@ -11,7 +11,7 @@ const AboutMe: VFC = () => {
 							as="h2"
 							fontWeight="semibold"
 							fontSize={{ base: "sm", md: "md" }}
-							fontFamily="Montserrat"
+							fontFamily="Noto Sans JP"
 							color={useColorModeValue("gray.400", "gray.600")}
 						>
 							01 - ABOUT ME
