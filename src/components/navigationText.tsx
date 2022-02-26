@@ -4,11 +4,12 @@ import NextLink from "next/link";
 
 type navigationTextProps = {
 	text: string;
+	linkUrl: string;
 };
 
 const NavigationText: VFC<navigationTextProps> = (props) => {
 	return (
-		<NextLink href="/" passHref>
+		<NextLink href={props.linkUrl} passHref>
 			<Link w="full">{props.text}</Link>
 		</NextLink>
 	);

@@ -5,10 +5,24 @@ import useWindowSize from "../../hooks/useWindowSize";
 import MobileNavigation from "../mobileNavigation";
 import NavigationText from "../navigationText";
 import ToggleColorModeBtn from "../toggleColorModeBtn";
+import { navigationInfoType } from "../../types/navigationInfoType";
 
 const Header: VFC = () => {
 	const windowSize = useWindowSize();
-	const navInnerText: string[] = ["home", "works", "contact"];
+	const navInfos: Array<navigationInfoType> = [
+		{
+			text: "home",
+			linkUrl: "/",
+		},
+		{
+			text: "works",
+			linkUrl: "/",
+		},
+		{
+			text: "contact",
+			linkUrl: "/",
+		},
+	];
 
 	return (
 		<header>
@@ -24,12 +38,12 @@ const Header: VFC = () => {
 							<HStack spacing={windowSize.width > 1024 ? 12 : 4}>
 								{windowSize.width > 1024 ? (
 									<HStack spacing={12}>
-										{navInnerText.map((t, i) => (
-											<NavigationText text={t} key={i} />
+										{navInfos.map((info, i) => (
+											<NavigationText text={info.text} linkUrl={info.linkUrl} key={i} />
 										))}
 									</HStack>
 								) : (
-									<MobileNavigation texts={navInnerText} />
+									<MobileNavigation infos={navInfos} />
 								)}
 								<ToggleColorModeBtn />
 							</HStack>
