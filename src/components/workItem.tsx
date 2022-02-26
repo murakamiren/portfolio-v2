@@ -20,7 +20,7 @@ const WorksItem: VFC<worksItemProps> = (props) => {
 		<article>
 			<a href={props.linkUrl} target="_blank" rel="noopener noreferrer">
 				<Box w="full">
-					<VStack justify="center" alignItems="center" spacing={8}>
+					<VStack alignItems="center" spacing={8}>
 						<Heading as="h3" fontSize="2xl" fontWeight="semibold" fontFamily="Montserrat">
 							{props.ttl}
 						</Heading>

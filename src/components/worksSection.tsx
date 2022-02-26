@@ -38,14 +38,14 @@ const WorksSection: VFC = () => {
 					</Text>
 					<Divider orientation="horizontal" w={16} borderColor={useColorModeValue("black", "white")} />
 					<Stack spacing={24}>
-						<Grid templateColumns="repeat(auto-fit, minmax(340px, 1fr))" gap={8} wordBreak="break-word">
+						<Grid
+							templateColumns="repeat(auto-fit, minmax(340px, 1fr))"
+							gap={8}
+							wordBreak="break-word"
+							placeItems="center"
+						>
 							{data ? (
 								<Fragment>
-									{/* {data.map((d, i) => (
-										<GridItem key={i}>
-											<WorksItem ttl={d.ttl} desc={d.shortDesc} img={d.workImage.url} linkUrl={d.linkUrl} />
-										</GridItem>
-									))} */}
 									{data
 										.filter((d, i) => i <= data.length - 2)
 										.map((latestData) => (
