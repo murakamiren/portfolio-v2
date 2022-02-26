@@ -23,6 +23,8 @@ const AboutMe: VFC = () => {
 								村上 蓮
 							</Text>
 							<Text fontSize="sm" color={useColorModeValue("gray.700", "gray.300")}>
+								2000年12月13日生まれ
+								<br />
 								ECCコンピュータ専門学校 Webデザインコース
 								<br />
 								24年卒

@@ -22,11 +22,15 @@ const Hero: VFC = () => {
 			<Flex flexDir="column" justifyContent="center" alignItems="center" w="full" h="full">
 				<VStack spacing={6}>
 					<VStack spacing="-4">
-						<Text fontFamily="Montserrat">hello</Text>
-						<Text fontSize={{ base: "5xl", md: "8xl" }} letterSpacing={1} fontWeight="semibold" fontFamily="Montserrat">
+						<Text fontFamily="Montserrat" fontSize={{ base: "sm", md: "md" }}>
+							hello
+						</Text>
+						<Text fontSize={{ base: "4xl", md: "7xl" }} letterSpacing={1} fontWeight="semibold" fontFamily="Montserrat">
 							Ren Murakami
 						</Text>
-						<Text fontFamily="Montserrat">web front-end developer & design</Text>
+						<Text fontFamily="Montserrat" fontSize={{ base: "sm", md: "md" }}>
+							web front-end developer & design
+						</Text>
 					</VStack>
 					<Center h="32px">
 						<Divider orientation="vertical" borderColor={useColorModeValue("black", "white")} />
