@@ -1,8 +1,20 @@
-import { Box, Divider, Grid, GridItem, Heading, Stack, Text, useColorModeValue } from "@chakra-ui/react";
-import { Fragment, VFC } from "react";
+import {
+	Box,
+	Button,
+	Center,
+	Divider,
+	Grid,
+	GridItem,
+	Heading,
+	Stack,
+	Text,
+	useColorModeValue,
+} from "@chakra-ui/react";
+import { Fragment, useEffect, useState, VFC } from "react";
 import useSWR from "swr";
 import { fetcher } from "../libs/fetcher";
 import { worksContentType } from "../types/worksContentsType";
+import NavigationText from "./navigationText";
 import WorksItem from "./workItem";
 
 const WorksSection: VFC = () => {
@@ -25,19 +37,38 @@ const WorksSection: VFC = () => {
 						My recent works
 					</Text>
 					<Divider orientation="horizontal" w={16} borderColor={useColorModeValue("black", "white")} />
-					<Grid templateColumns="repeat(auto-fit, minmax(340px, 1fr))" gap={8} wordBreak="break-word">
-						{data ? (
-							<Fragment>
-								{data.map((d, i) => (
-									<GridItem key={i}>
-										<WorksItem ttl={d.ttl} desc={d.shortDesc} linkUrl={d.linkUrl} />
-									</GridItem>
-								))}
-							</Fragment>
-						) : (
-							<Fragment>{error ? <Text>cant load data</Text> : <Text>loading...</Text>}</Fragment>
-						)}
-					</Grid>
+					<Stack spacing={24}>
+						<Grid templateColumns="repeat(auto-fit, minmax(340px, 1fr))" gap={8} wordBreak="break-word">
+							{data ? (
+								<Fragment>
+									{/* {data.map((d, i) => (
+										<GridItem key={i}>
+											<WorksItem ttl={d.ttl} desc={d.shortDesc} img={d.workImage.url} linkUrl={d.linkUrl} />
+										</GridItem>
+									))} */}
+									{data
+										.filter((d, i) => i <= data.length - 2)
+										.map((latestData) => (
+											<GridItem key={latestData.createdAt}>
+												<WorksItem
+													ttl={latestData.ttl}
+													desc={latestData.shortDesc}
+													img={latestData.workImage.url}
+													linkUrl={latestData.linkUrl}
+												/>
+											</GridItem>
+										))}
+								</Fragment>
+							) : (
+								<Fragment>{error ? <Text>cant load data</Text> : <Text>loading...</Text>}</Fragment>
+							)}
+						</Grid>
+						<Center>
+							<Button size="md">
+								<NavigationText text="more works" linkUrl="/" />
+							</Button>
+						</Center>
+					</Stack>
 				</Stack>
 			</Box>
 		</section>
