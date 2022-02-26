@@ -102,7 +102,7 @@ const Skills: VFC = () => {
 							fontFamily="Montserrat"
 							color={useColorModeValue("gray.400", "gray.600")}
 						>
-							02 - Skills
+							02 - skills
 						</Heading>
 						<Stack spacing={8}>
 							<Text fontSize={{ base: "4xl", md: "5xl" }} fontFamily="Montserrat" letterSpacing="normal">

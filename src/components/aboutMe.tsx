@@ -6,17 +6,16 @@ const AboutMe: VFC = () => {
 		<section>
 			<Box w="full" mt="120px">
 				<Stack spacing={8}>
-					<Stack spacing={8} px={{ base: 12, md: 32 }}>
-						<Heading
-							as="h2"
-							fontWeight="semibold"
-							fontSize={{ base: "sm", md: "md" }}
-							fontFamily="Noto Sans JP"
-							color={useColorModeValue("gray.400", "gray.600")}
-						>
-							01 - ABOUT ME
-						</Heading>
-					</Stack>
+					<Heading
+						as="h2"
+						fontWeight="semibold"
+						fontSize={{ base: "sm", md: "md" }}
+						fontFamily="Noto Sans JP"
+						color={useColorModeValue("gray.400", "gray.600")}
+						px={{ base: 12, md: 32 }}
+					>
+						01 - about me
+					</Heading>
 					<Stack spacing={8} px={{ base: 12, md: 32 }}>
 						<Stack spacing={1}>
 							<Text fontSize={{ base: "4xl", md: "5xl" }} fontFamily="Montserrat" letterSpacing="widest">
