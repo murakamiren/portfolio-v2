@@ -1,18 +1,32 @@
-import { Box, Center, Divider, Flex, HStack, Icon, Text, useColorModeValue, VStack } from "@chakra-ui/react";
+import {
+	Box,
+	Button,
+	Center,
+	Divider,
+	Flex,
+	HStack,
+	Icon,
+	Spacer,
+	Text,
+	useColorModeValue,
+	VStack,
+} from "@chakra-ui/react";
 import { AiOutlineInstagram, AiOutlineTwitter, AiOutlineGithub } from "react-icons/ai";
 import { VFC } from "react";
+import NavigationText from "./navigationText";
+import { EmailIcon } from "@chakra-ui/icons";
 
 const Hero: VFC = () => {
 	return (
-		<Box w="100vw" h="100vh">
-			<Flex justifyContent="center" alignItems="center" w="full" h="full">
+		<Box w="100vw" h="100vh" position="relative">
+			<Flex flexDir="column" justifyContent="center" alignItems="center" w="full" h="full">
 				<VStack spacing={6}>
 					<VStack spacing="-4">
-						<Text>hello</Text>
-						<Text fontSize={{ base: "5xl", md: "8xl" }} letterSpacing={2} fontWeight="semibold">
+						<Text fontFamily="Montserrat">hello</Text>
+						<Text fontSize={{ base: "5xl", md: "8xl" }} letterSpacing={1} fontWeight="semibold" fontFamily="Montserrat">
 							Ren Murakami
 						</Text>
-						<Text>web front-end developer</Text>
+						<Text fontFamily="Montserrat">web front-end developer & design</Text>
 					</VStack>
 					<Center h="32px">
 						<Divider orientation="vertical" borderColor={useColorModeValue("black", "white")} />
@@ -32,6 +46,9 @@ const Hero: VFC = () => {
 					</Center>
 				</VStack>
 			</Flex>
+			<Button leftIcon={<EmailIcon />} position="absolute" bottom="0" left="0" right="0" mx="auto" mb={20} size="md">
+				<NavigationText text="contact me" linkUrl="/" />
+			</Button>
 		</Box>
 	);
 };

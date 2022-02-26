@@ -4,7 +4,7 @@ import { VFC } from "react";
 const Footer: VFC = () => {
 	return (
 		<footer>
-			<Box w="100vw" h="80px">
+			<Box w="100vw" h="80px" mt="96px">
 				<Flex w="full" h="full" justifyContent="center" alignItems="center">
 					<Text>
 						<small>&copy;Ren Murakami`s Portfolio</small>

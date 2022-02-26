@@ -1,7 +1,9 @@
 import { Box, Text } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import Head from "next/head";
+import AboutMe from "../components/aboutMe";
 import Hero from "../components/hero";
+import Skills from "../components/skills";
 
 const Home: NextPage = () => {
 	return (
@@ -13,9 +15,8 @@ const Home: NextPage = () => {
 			</Head>
 
 			<Hero />
-			<Box>
-				<Text>hello world</Text>
-			</Box>
+			<AboutMe />
+			<Skills />
 		</div>
 	);
 };

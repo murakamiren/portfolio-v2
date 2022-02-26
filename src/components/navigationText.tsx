@@ -10,7 +10,9 @@ type navigationTextProps = {
 const NavigationText: VFC<navigationTextProps> = (props) => {
 	return (
 		<NextLink href={props.linkUrl} passHref>
-			<Link w="full">{props.text}</Link>
+			<Link w="full" fontFamily="Montserrat">
+				{props.text}
+			</Link>
 		</NextLink>
 	);
 };

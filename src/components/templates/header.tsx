@@ -27,7 +27,7 @@ const Header: VFC = () => {
 	return (
 		<header>
 			<Flex w="100vw" justifyContent="center">
-				<Container maxW="container.xl" position="absolute" top="0">
+				<Container maxW="container.xl" position="absolute" top="0" zIndex="1">
 					<nav>
 						<Flex justifyContent="space-between" alignItems="center" h="8vh">
 							<NextLink href="/" passHref>
