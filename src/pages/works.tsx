@@ -7,7 +7,7 @@ const Works: NextPage = () => {
 			<Box w="full" h="50vh">
 				<Flex h="full" justify="center" alignItems="center">
 					<Heading as="h2" fontFamily="montserrat">
-						this is works page
+						My all works
 					</Heading>
 				</Flex>
 			</Box>
