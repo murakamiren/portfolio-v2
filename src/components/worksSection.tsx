@@ -54,7 +54,7 @@ const WorksSection: VFC = () => {
 													ttl={latestData.ttl}
 													desc={latestData.shortDesc}
 													img={latestData.workImage.url}
-													linkUrl={latestData.linkUrl}
+													linkUrl={"/works/" + latestData.ttl}
 												/>
 											</GridItem>
 										))}
