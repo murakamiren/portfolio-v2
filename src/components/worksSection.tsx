@@ -65,7 +65,7 @@ const WorksSection: VFC = () => {
 						</Grid>
 						<Center>
 							<Button size="md">
-								<NavigationText text="more works" linkUrl="/" />
+								<NavigationText text="more works" linkUrl="/works" />
 							</Button>
 						</Center>
 					</Stack>
