@@ -10,7 +10,7 @@ import {
 	Text,
 	useColorModeValue,
 } from "@chakra-ui/react";
-import { Fragment, useEffect, useState, VFC } from "react";
+import { Fragment, VFC } from "react";
 import useSWR from "swr";
 import { fetcher } from "../libs/fetcher";
 import { worksContentType } from "../types/worksContentsType";

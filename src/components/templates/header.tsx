@@ -16,7 +16,7 @@ const Header: VFC = () => {
 		},
 		{
 			text: "works",
-			linkUrl: "/",
+			linkUrl: "/works",
 		},
 		{
 			text: "contact",
