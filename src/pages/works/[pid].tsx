@@ -38,6 +38,7 @@ const PostWorks: NextPage<postPropsType> = ({ work }) => {
 				{work.techStack.map((d) => (
 					<Text key={d}>{d}</Text>
 				))}
+				{work.isGroup && <Text>この作品はチーム制作です</Text>}
 				<Link href={work.linkUrl} rel="noreferrer noopener" target="_blank">
 					{work.ttl}のサイトはこちら
 				</Link>
