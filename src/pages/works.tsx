@@ -21,7 +21,7 @@ const Works: NextPage = () => {
 				<Box w="full">
 					<Box w="full" h="50vh">
 						<Flex h="full" justify="center" alignItems="center">
-							<Heading as="h2" fontFamily="montserrat">
+							<Heading as="h2" fontFamily="montserrat" fontWeight="semibold">
 								My all works
 							</Heading>
 						</Flex>
