@@ -1,4 +1,18 @@
-import { Box, Flex, Heading, Link, Text } from "@chakra-ui/react";
+import { ExternalLinkIcon } from "@chakra-ui/icons";
+import {
+	Box,
+	Center,
+	Divider,
+	Flex,
+	Heading,
+	Image,
+	Link,
+	List,
+	ListItem,
+	Text,
+	useColorModeValue,
+	VStack,
+} from "@chakra-ui/react";
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
@@ -31,17 +45,37 @@ const PostWorks: NextPage<postPropsType> = ({ work }) => {
 						work ttl: {pid}
 					</Heading>
 				</Flex>
-				<Text>{work.ttl}</Text>
-				<Text>{work.shortDesc}</Text>
-				<Text>{work.desc}</Text>
-				<Text>{work.when}</Text>
-				{work.techStack.map((d) => (
-					<Text key={d}>{d}</Text>
-				))}
-				{work.isGroup && <Text>この作品はチーム制作です</Text>}
-				<Link href={work.linkUrl} rel="noreferrer noopener" target="_blank">
-					{work.ttl}のサイトはこちら
-				</Link>
+				<Flex flexDir={{ base: "column", lg: "row" }} wrap="nowrap" justify="space-between" alignItems="center" gap={8}>
+					<VStack spacing={8} justify="flex-start" alignItems="flex-start" flex="1 0 50%">
+						<Heading as="h3" fontFamily="montserrat" fontWeight="semibold">
+							{work.ttl}
+						</Heading>
+						<Divider orientation="horizontal" w={16} borderColor={useColorModeValue("black", "white")} />
+						<Text>{work.shortDesc}</Text>
+						<Text>{work.desc}</Text>
+						<Text>制作時期: {work.when}</Text>
+						<VStack spacing={2} justify="flex-start" alignItems="flex-start">
+							<Heading as="h4" fontFamily="montserrat" fontWeight="semibold" fontSize="xl">
+								使用技術:
+							</Heading>
+							<List>
+								{work.techStack.map((d) => (
+									<ListItem key={d}>
+										<Text>{d}</Text>
+									</ListItem>
+								))}
+							</List>
+						</VStack>
+						{work.isGroup && <Text>この作品はチーム制作です</Text>}
+						<Link href={work.linkUrl} rel="noreferrer noopener" target="_blank" isExternal>
+							{work.ttl}のサイトはこちら
+							<ExternalLinkIcon mx="2px" />
+						</Link>
+					</VStack>
+					<Box flex="1 2 50%" h="full">
+						<Image src={work.workImage.url} alt={"image of " + work.ttl} w="full" objectFit="contain" />
+					</Box>
+				</Flex>
 			</Box>
 		</Fragment>
 	);

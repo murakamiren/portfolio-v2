@@ -18,7 +18,12 @@ const AboutMe: VFC = () => {
 					</Heading>
 					<Stack spacing={8} px={{ base: 12, md: 32 }}>
 						<Stack spacing={1}>
-							<Text fontSize={{ base: "4xl", md: "5xl" }} fontFamily="Montserrat" letterSpacing="widest">
+							<Text
+								fontSize={{ base: "4xl", md: "5xl" }}
+								fontFamily="Montserrat"
+								letterSpacing="widest"
+								fontWeight="md"
+							>
 								村上 蓮
 							</Text>
 							<Text fontSize="sm" color={useColorModeValue("gray.700", "gray.300")}>

@@ -33,7 +33,7 @@ const WorksSection: VFC = () => {
 					>
 						03 - works
 					</Heading>
-					<Text fontSize={{ base: "4xl", md: "5xl" }} fontFamily="Montserrat" letterSpacing="normal">
+					<Text fontSize={{ base: "4xl", md: "5xl" }} fontFamily="Montserrat" letterSpacing="normal" fontWeight="md">
 						My recent works
 					</Text>
 					<Divider orientation="horizontal" w={16} borderColor={useColorModeValue("black", "white")} />

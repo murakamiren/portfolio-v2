@@ -105,7 +105,12 @@ const Skills: VFC = () => {
 							02 - skills
 						</Heading>
 						<Stack spacing={8}>
-							<Text fontSize={{ base: "4xl", md: "5xl" }} fontFamily="Montserrat" letterSpacing="normal">
+							<Text
+								fontSize={{ base: "4xl", md: "5xl" }}
+								fontFamily="Montserrat"
+								letterSpacing="normal"
+								fontWeight="md"
+							>
 								What I use & am learning{" "}
 							</Text>
 							<Flex justifyContent="flex-end">

@@ -18,7 +18,7 @@ const ContactSection: VFC = () => {
 					</Heading>
 					<Divider orientation="horizontal" w={16} borderColor={useColorModeValue("black", "white")} />
 
-					<Text fontSize={{ base: "4xl", md: "5xl" }} fontFamily="Montserrat" letterSpacing="normal">
+					<Text fontSize={{ base: "4xl", md: "5xl" }} fontFamily="Montserrat" letterSpacing="normal" fontWeight="md">
 						Contact me
 					</Text>
 					<VStack spacing={4}>
