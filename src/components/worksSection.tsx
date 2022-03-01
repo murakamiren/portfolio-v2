@@ -39,7 +39,7 @@ const WorksSection: VFC = () => {
 					<Divider orientation="horizontal" w={16} borderColor={useColorModeValue("black", "white")} />
 					<Stack spacing={24}>
 						<Grid
-							templateColumns="repeat(auto-fit, minmax(340px, 1fr))"
+							templateColumns="repeat(auto-fit, minmax(280px, 1fr))"
 							gap={8}
 							wordBreak="break-word"
 							placeItems="center"

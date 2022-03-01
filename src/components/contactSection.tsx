@@ -32,7 +32,7 @@ const ContactSection: VFC = () => {
 							email
 						</Heading>
 						<Divider orientation="vertical" h={8} borderColor={useColorModeValue("black", "white")} />
-						<Text fontSize={{ base: "3xl", md: "5xl" }}>renmurakami1213@gmail.com</Text>
+						<Text fontSize={{ base: "2xl", md: "5xl" }}>renmurakami1213@gmail.com</Text>
 					</VStack>
 					<VStack spacing={4}>
 						<Heading
