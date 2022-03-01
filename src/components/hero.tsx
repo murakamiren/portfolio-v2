@@ -49,7 +49,15 @@ const Hero: VFC = () => {
 						</HStack>
 					</Center>
 				</VStack>
-				<Button leftIcon={<EmailIcon />} position="absolute" bottom="0" left="0" right="0" mx="auto" mb={20} size="lg">
+				<Button
+					leftIcon={<EmailIcon />}
+					position="absolute"
+					bottom="0"
+					left="50%"
+					transform="translateX(-50%)"
+					mb={20}
+					size="lg"
+				>
 					<NavigationText text="contact me" linkUrl="/" />
 				</Button>
 			</Flex>
