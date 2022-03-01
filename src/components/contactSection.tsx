@@ -46,13 +46,13 @@ const ContactSection: VFC = () => {
 						</Heading>
 						<Divider orientation="vertical" h={8} borderColor={useColorModeValue("black", "white")} />
 						<HStack spacing={8}>
-							<a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+							<a href="https://www.instagram.com/ren_m12/" target="_blank" rel="noopener noreferrer">
 								<Icon as={AiOutlineInstagram} w={6} h={6} />
 							</a>
 							<a href="https://twitter.com/blxxmren" target="_blank" rel="noopener noreferrer">
 								<Icon as={AiOutlineTwitter} w={6} h={6} />
 							</a>
-							<a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+							<a href="https://github.com/murakamiren" target="_blank" rel="noopener noreferrer">
 								<Icon as={AiOutlineGithub} w={6} h={6} />
 							</a>
 						</HStack>
