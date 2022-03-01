@@ -45,7 +45,13 @@ const PostWorks: NextPage<postPropsType> = ({ work }) => {
 						work ttl: {pid}
 					</Heading>
 				</Flex>
-				<Flex flexDir={{ base: "column", lg: "row" }} wrap="nowrap" justify="space-between" alignItems="center" gap={8}>
+				<Flex
+					flexDir={{ base: "column-reverse", lg: "row" }}
+					wrap="nowrap"
+					justify="space-between"
+					alignItems="center"
+					gap={8}
+				>
 					<VStack spacing={8} justify="flex-start" alignItems="flex-start" flex="1 0 50%">
 						<Heading as="h3" fontFamily="montserrat" fontWeight="semibold">
 							{work.ttl}
@@ -72,8 +78,8 @@ const PostWorks: NextPage<postPropsType> = ({ work }) => {
 							<ExternalLinkIcon mx="2px" />
 						</Link>
 					</VStack>
-					<Box flex="1 2 50%" h="full">
-						<Image src={work.workImage.url} alt={"image of " + work.ttl} w="full" objectFit="contain" />
+					<Box flex="1 2 50%" h="520px">
+						<Image src={work.workImage.url} alt={"image of " + work.ttl} w="full" h="full" objectFit="contain" />
 					</Box>
 				</Flex>
 			</Box>
