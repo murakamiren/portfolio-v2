@@ -20,7 +20,7 @@ const WorksItem: VFC<worksItemProps> = (props) => {
 	return (
 		<article>
 			<NextLink href={props.linkUrl} passHref>
-				<Box w="full">
+				<Box w="full" cursor="pointer">
 					<VStack alignItems="center" spacing={8}>
 						<Heading as="h3" fontSize="2xl" fontWeight="semibold" fontFamily="Montserrat">
 							{props.ttl}
