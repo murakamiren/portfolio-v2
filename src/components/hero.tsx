@@ -19,7 +19,7 @@ import { EmailIcon } from "@chakra-ui/icons";
 const Hero: VFC = () => {
 	return (
 		<Box w="100vw" h="100vh" position="relative">
-			<Flex flexDir="column" justifyContent="center" alignItems="center" w="full" h="full">
+			<Flex flexDir="column" justifyContent="center" alignItems="center" w="full" h="full" position="relative">
 				<VStack spacing={6}>
 					<VStack spacing="-4">
 						<Text fontFamily="Montserrat" fontSize={{ base: "sm", md: "md" }}>
@@ -49,10 +49,10 @@ const Hero: VFC = () => {
 						</HStack>
 					</Center>
 				</VStack>
+				<Button leftIcon={<EmailIcon />} position="absolute" bottom="0" left="0" right="0" mx="auto" mb={20} size="lg">
+					<NavigationText text="contact me" linkUrl="/" />
+				</Button>
 			</Flex>
-			<Button leftIcon={<EmailIcon />} position="absolute" bottom="0" left="0" right="0" mx="auto" mb={20} size="md">
-				<NavigationText text="contact me" linkUrl="/" />
-			</Button>
 		</Box>
 	);
 };

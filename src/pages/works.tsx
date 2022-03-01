@@ -28,7 +28,7 @@ const Works: NextPage = () => {
 					</Box>
 					<Box mt="120px" px={{ base: 12, md: 32 }}>
 						<Grid
-							templateColumns="repeat(auto-fit, minmax(340px, 1fr))"
+							templateColumns="repeat(auto-fit, minmax(280px, 1fr))"
 							gap={12}
 							wordBreak="break-word"
 							placeItems="center"
