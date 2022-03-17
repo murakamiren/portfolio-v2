@@ -1,16 +1,4 @@
-import {
-	Box,
-	Button,
-	Center,
-	Divider,
-	Flex,
-	HStack,
-	Icon,
-	Spacer,
-	Text,
-	useColorModeValue,
-	VStack,
-} from "@chakra-ui/react";
+import { Box, Button, Center, Divider, Flex, HStack, Icon, Text, useColorModeValue, VStack } from "@chakra-ui/react";
 import { AiOutlineInstagram, AiOutlineTwitter, AiOutlineGithub } from "react-icons/ai";
 import { VFC } from "react";
 import NavigationText from "./navigationText";
